@@ -94,9 +94,9 @@ public class week12Group4 extends UtilityClass {
         String actMyAccountTitle = driver.getTitle();
         String expMyAccountTitle = "My Account";
         if (actMyAccountTitle.equals(expMyAccountTitle)){
-            System.out.println("\nThe title of the 'My Account' page: " + expMyAccountTitle + " - Pass\n");
+            System.out.println("\nThe title of the 'My Account' page: " + expMyAccountTitle + " - Pass");
         }else {
-            System.out.println("The expected title of the 'My Account' page is not the same as the actual one - Fail\n");
+            System.out.println("The expected title of the 'My Account' page is not the same as the actual one - Fail");
         }
 
         WebElement myLanguages = driver.findElement(By.cssSelector("i[class='icon-cog']"));
@@ -104,10 +104,12 @@ public class week12Group4 extends UtilityClass {
         String actMyLanguages = driver.getTitle();
         String expMyLanguages = "My Languages";
         if (actMyLanguages.equals(expMyLanguages)){
-            System.out.println("The title of the 'My Account' page: " + expMyLanguages + " - Pass");
+            System.out.println("The title of the 'My Languages' page: " + expMyLanguages + " - Pass");
         }else {
             System.out.println("The expected title of the 'My Languages' page is not the same as the actual one - Fail");
         }
+
+        System.out.println();
 
         List<WebElement> dropdownLanguages = driver.findElements(By.cssSelector("[id='default-locale-field']>option+option"));
         WebElement languageDropdown = driver.findElement(By.xpath("//*[@id=\"default-locale-field\"]"));
